@@ -157,7 +157,7 @@ h6 {
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 10px 0;
+  padding: 12px 0;
   transition: all 0.5s;
   z-index: 997;
 }
@@ -674,7 +674,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: calc(100vh - 92px);
+  min-height: calc(103vh - 92px);
   position: relative;
   padding: 60px 0;
   display: flex;
@@ -724,10 +724,12 @@ section,
 @media (max-width: 768px) {
   .hero h2 {
     font-size: 32px;
+    font-family: "Quicksand", sans-serif;
   }
 
   .hero p {
     font-size: 20px;
+    font-family: "Quicksand", sans-serif;
   }
 }
 
