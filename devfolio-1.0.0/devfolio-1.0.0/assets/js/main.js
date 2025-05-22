@@ -118,6 +118,9 @@
     });
   }
 
+  // Animate bio in About me
+
+
   /**
    * Animate the skills items on reveal
    */
@@ -130,6 +133,65 @@
         let progress = item.querySelectorAll('.progress .progress-bar');
         progress.forEach(el => {
           el.style.width = el.getAttribute('aria-valuenow') + '%';
+        });
+      }
+    });
+  });
+  /**
+   * Animate the skills items on reveal
+   */
+
+
+
+
+   document.querySelectorAll('.progress-circle').forEach(container => {
+    const percent = container.dataset.percent;
+    const label = container.dataset.label;
+
+    // Create SVG
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    const bg = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    const fg = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+
+    // Base circle
+    bg.setAttribute("class", "circle-bg");
+    bg.setAttribute("cx", "50");
+    bg.setAttribute("cy", "50");
+    bg.setAttribute("r", "45");
+
+    // Foreground (animated) circle
+    fg.setAttribute("class", "circle-fg");
+    fg.setAttribute("cx", "50");
+    fg.setAttribute("cy", "50");
+    fg.setAttribute("r", "45");
+
+    svg.appendChild(bg);
+    svg.appendChild(fg);
+    container.appendChild(svg);
+
+    // Percent and label
+    const percentText = document.createElement("div");
+    percentText.className = "percent-text";
+    percentText.textContent = `${percent}%`;
+
+    const labelText = document.createElement("div");
+    labelText.className = "label-text";
+    labelText.textContent = label;
+
+    container.appendChild(percentText);
+    container.appendChild(labelText);
+  });
+
+  // Animate on scroll using Waypoints
+  document.querySelectorAll('.skills-animation').forEach((item) => {
+    new Waypoint({
+      element: item,
+      offset: '80%',
+      handler: function(direction) {
+        item.querySelectorAll('.circle-fg').forEach(el => {
+          const percent = el.parentElement.parentElement.dataset.percent;
+          const offset = 283 - (283 * percent / 100);
+          el.style.strokeDashoffset = offset;
         });
       }
     });

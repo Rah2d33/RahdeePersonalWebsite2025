@@ -676,7 +676,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: calc(103vh - 92px);
+  min-height: calc(107vh - 92px);
   position: relative;
   padding: 60px 0;
   display: flex;
@@ -740,6 +740,8 @@ font-family: "Roboto", sans-serif;
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+
+
 .about .container {
   background-color: var(--surface-color);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
@@ -753,6 +755,77 @@ font-family: "Roboto", sans-serif;
   font-family: "Share Tech", sans-serif;
 }
 
+.skills-row {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 2.9rem; /* <--- this controls space between circles */
+  margin-bottom: 3rem;
+
+}
+
+
+h1 {
+  font-size: 1.1rem;
+  text-align: left;  /* Align h1 to the left */
+  margin-bottom: 1rem;
+  margin-left: 0.1rem; /* slight indent for spacing */
+  font-family: "Roboto", sans-serif;
+}
+
+
+
+.progress-circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.progress-circle svg {
+  transform: rotate(-90deg);
+  width: 100px;
+  height: 100px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 10;
+}
+
+.circle-fg {
+  fill: none;
+  stroke: #00c6ff;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transition: stroke-dashoffset 1.4s ease-out;
+}
+
+.progress-circle .percent-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  font-size: 1rem;
+  font-weight: bold;
+  color: #00c6ff;
+}
+
+.progress-circle .label-text {
+  position: absolute;
+  bottom: -1.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.85rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* =========================
+progress horizontal bar */
+
 .about .skills-content h5.UXUi-skills-title {
   font-size: 18px;
   font-weight: 700;
@@ -765,6 +838,7 @@ font-family: "Roboto", sans-serif;
   font-weight: 700;
   margin: 30px 0 15px 0;
   font-family: "Share Tech", sans-serif;
+
 }
 
 .about .skills-content h5.Backend-skills-title {
@@ -850,6 +924,111 @@ font-family: "Roboto", sans-serif;
   background-color: var(--accent-color);
 }
 
+.about .skills-content h5.UXUi-skills-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 30px 0 15px 0;
+  font-family: "Share Tech", sans-serif;
+}
+
+.about .skills-content h5.frontend-skills-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 30px 0 15px 0;
+  font-family: "Share Tech", sans-serif;
+  color: ;
+}
+
+.about .skills-content h5.Backend-skills-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 30px 0 15px 0;
+  font-family: "Share Tech", sans-serif;
+}
+
+.about .skills-content h5.Frameworks-skills-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 30px 0 15px 0;
+  font-family: "Share Tech", sans-serif;
+}
+
+.about .skills-content h5.Databases-skills-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 30px 0 15px 0;
+  font-family: "Share Tech", sans-serif;
+}
+
+.about .skills-content h5.CloudStorage-skills-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 30px 0 15px 0;
+  font-family: "Share Tech", sans-serif;
+}
+
+.about .skills-content h5.RPA-skills-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 30px 0 15px 0;
+  font-family: "Share Tech", sans-serif;
+}
+
+.about .skills-content h5.MS-skills-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 30px 0 15px 0;
+  font-family: "Share Tech", sans-serif;
+}
+
+.about .skills-content h5.Design-skills-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 30px 0 15px 0;
+  font-family: "Share Tech", sans-serif;
+}
+
+.about .progress {
+  height: 36px;
+  display: block;
+  background: none;
+  border-radius: 0;
+  margin-top: 15px;
+
+
+}
+
+.about .progress .skill {
+  color: var(--default-color);
+  padding: 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: var(--heading-font);
+  font-family: "Roboto", sans-serif;
+
+}
+
+.about .progress .skill .val {
+  float: right;
+  font-style: normal;
+  padding: 0px 50px 0px 0px;
+}
+
+.about .progress-bar-wrap {
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  height: 10px;
+  width:  92%;
+}
+
+.about .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: var(--accent-color);
+}
+
 .about .about-me h4 {
   font-size: 45px;
   text-align: center;
@@ -863,11 +1042,165 @@ font-family: "Roboto", sans-serif;
 .about .about-me p {
   font-size: 15px;
   text-align:justify;
+
+}
+
+
+@media (max-width: 600px) {
+
+  .about .skills-content h5 {
+  font-size: 35px;
+  font-weight: 700;
+  margin: 30px 0 15px 0;
+  font-family: "Share Tech", sans-serif;
+  text-align: center;
+}
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.21rem;
+  margin-bottom: 2rem;
+}
+
+.progress-circle {
+  position: relative;
+  flex: 1 1 calc(33.33% - 1rem); /* 3 per row with spacing */
+  max-width: 100px;
+  min-width: 100px;
+  height: auto;
+  aspect-ratio: 1 / 1; /* keeps circle shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.progress-circle svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+
+  h1 {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    text-align: center;
+  }
+
+  .circle {
+     position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: conic-gradient(var(--color, #00f) 0deg, #eee 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  }
+
+.circle::before {
+  content: '';
+  position: absolute;
+  width: 68px;
+  height: 68px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.circle .counter {
+  position: absolute;
+  font-size: 0.9rem;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.circle .label {
+  position: absolute;
+  bottom: -2rem; /* increased from -1.2rem */
+  text-align: center;
+  width: 100%;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* =========================
+progress horizontal bar */
+
+.about .progress {
+  height: 36px;
+  display: block;
+  background: none;
+  border-radius: 0;
+  margin-top: 15px;
+
+
+}
+
+.about .progress .skill {
+  color: var(--default-color);
+  padding: 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: var(--heading-font);
+  font-family: "Roboto", sans-serif;
+
+}
+
+.about .progress .skill .val {
+  float: right;
+  font-style: normal;
+  padding: 0px 0px 0px 0px;
+}
+
+.about .progress-bar-wrap {
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  height: 10px;
+  width:  100%;
+}
+
+.about .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: var(--accent-color);
+}
+
+.about .about-me h4 {
+  font-size: 45px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-family: "Share Tech", sans-serif;
+}
+
+.about .about-me p {
+  font-size: 15px;
+  text-align:justify;
+
+}
+
 }
 
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
+.container.resume.section-title h2 {
+  font-family: "Share Tech", sans-serif;
+  font-size: 45px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+}
+
 .resume .resume-title {
   color: var(--heading-color);
   font-size: 26px;
@@ -940,111 +1273,6 @@ font-family: "Roboto", sans-serif;
     background: var(--primary);
 }
 
-
-
-/*--------------------------------------------------------------
-# Services Section
---------------------------------------------------------------*/
-.services .service-item {
-  background-color: var(--surface-color);
-  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
-  padding: 60px 30px;
-  transition: all ease-in-out 0.3s;
-  border-radius: 18px;
-  border-bottom: 5px solid var(--surface-color);
-  height: 100%;
-}
-
-.services .service-item .icon {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  margin: 0;
-  width: 64px;
-  height: 64px;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  font-size: 28px;
-  transition: ease-in-out 0.3s;
-}
-
-.services .service-item h3 {
-  font-weight: 700;
-  margin: 10px 0 15px 0;
-  font-size: 22px;
-  transition: ease-in-out 0.3s;
-}
-
-.services .service-item p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-@media (min-width: 1365px) {
-  .services .service-item:hover {
-    transform: translateY(-10px);
-    border-color: var(--accent-color);
-  }
-
-  .services .service-item:hover h3 {
-    color: var(--accent-color);
-  }
-}
-
-/*--------------------------------------------------------------
-# Stats Section
---------------------------------------------------------------*/
-.stats {
-  position: relative;
-  padding: 120px 0;
-}
-
-.stats img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.stats:before {
-  content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 40%);
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-}
-
-.stats .container {
-  position: relative;
-  z-index: 3;
-}
-
-.stats .stats-item {
-  padding: 30px;
-  width: 100%;
-}
-
-.stats .stats-item span {
-  font-size: 48px;
-  display: block;
-  color: var(--default-color);
-  font-weight: 700;
-}
-
-.stats .stats-item p {
-  padding: 0;
-  margin: 0;
-  font-family: var(--heading-font);
-  font-size: 16px;
-  font-weight: 700;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-}
 
 /*--------------------------------------------------------------
 # Portfolio Section
