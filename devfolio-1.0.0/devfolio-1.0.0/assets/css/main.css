@@ -741,21 +741,28 @@ font-family: "Roboto", sans-serif;
 # About Section
 --------------------------------------------------------------*/
 
-
+  .about .skills-content h5 {
+  font-size: 35px;
+  font-weight: 700;
+  margin: 30px 0 15px 0;
+  font-family: "Share Tech", sans-serif;
+  text-align: center;
+}
 .about .container {
   background-color: var(--surface-color);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   padding: 30px;
 }
 
-.about .skills-content h5 {
+.about .soft-skills-content h5 {
   font-size: 35px;
   font-weight: 700;
   margin: 30px 0 15px 0;
   font-family: "Share Tech", sans-serif;
+
 }
 
-.skills-row {
+.soft-skills-row {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -765,13 +772,7 @@ font-family: "Roboto", sans-serif;
 }
 
 
-h1 {
-  font-size: 1.1rem;
-  text-align: left;  /* Align h1 to the left */
-  margin-bottom: 1rem;
-  margin-left: 0.1rem; /* slight indent for spacing */
-  font-family: "Roboto", sans-serif;
-}
+
 
 
 
@@ -823,213 +824,8 @@ h1 {
   font-weight: 500;
 }
 
-/* =========================
-progress horizontal bar */
 
-.about .skills-content h5.UXUi-skills-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 30px 0 15px 0;
-  font-family: "Share Tech", sans-serif;
-}
-
-.about .skills-content h5.frontend-skills-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 30px 0 15px 0;
-  font-family: "Share Tech", sans-serif;
-
-}
-
-.about .skills-content h5.Backend-skills-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 30px 0 15px 0;
-  font-family: "Share Tech", sans-serif;
-}
-
-.about .skills-content h5.Frameworks-skills-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 30px 0 15px 0;
-  font-family: "Share Tech", sans-serif;
-}
-
-.about .skills-content h5.Databases-skills-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 30px 0 15px 0;
-  font-family: "Share Tech", sans-serif;
-}
-
-.about .skills-content h5.CloudStorage-skills-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 30px 0 15px 0;
-  font-family: "Share Tech", sans-serif;
-}
-
-.about .skills-content h5.RPA-skills-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 30px 0 15px 0;
-  font-family: "Share Tech", sans-serif;
-}
-
-.about .skills-content h5.Design-skills-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 30px 0 15px 0;
-  font-family: "Share Tech", sans-serif;
-}
-
-.about .progress {
-  height: 36px;
-  display: block;
-  background: none;
-  border-radius: 0;
-  margin-top: 15px;
-
-
-}
-
-.about .progress .skill {
-  color: var(--default-color);
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: var(--heading-font);
-  font-family: "Roboto", sans-serif;
-
-}
-
-.about .progress .skill .val {
-  float: right;
-  font-style: normal;
-  padding: 0px 50px 0px 0px;
-}
-
-.about .progress-bar-wrap {
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
-  height: 10px;
-  width:  92%;
-}
-
-.about .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: var(--accent-color);
-}
-
-.about .skills-content h5.UXUi-skills-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 30px 0 15px 0;
-  font-family: "Share Tech", sans-serif;
-}
-
-.about .skills-content h5.frontend-skills-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 30px 0 15px 0;
-  font-family: "Share Tech", sans-serif;
-  color: ;
-}
-
-.about .skills-content h5.Backend-skills-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 30px 0 15px 0;
-  font-family: "Share Tech", sans-serif;
-}
-
-.about .skills-content h5.Frameworks-skills-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 30px 0 15px 0;
-  font-family: "Share Tech", sans-serif;
-}
-
-.about .skills-content h5.Databases-skills-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 30px 0 15px 0;
-  font-family: "Share Tech", sans-serif;
-}
-
-.about .skills-content h5.CloudStorage-skills-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 30px 0 15px 0;
-  font-family: "Share Tech", sans-serif;
-}
-
-.about .skills-content h5.RPA-skills-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 30px 0 15px 0;
-  font-family: "Share Tech", sans-serif;
-}
-
-.about .skills-content h5.MS-skills-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 30px 0 15px 0;
-  font-family: "Share Tech", sans-serif;
-}
-
-.about .skills-content h5.Design-skills-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 30px 0 15px 0;
-  font-family: "Share Tech", sans-serif;
-}
-
-.about .progress {
-  height: 36px;
-  display: block;
-  background: none;
-  border-radius: 0;
-  margin-top: 15px;
-
-
-}
-
-.about .progress .skill {
-  color: var(--default-color);
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: var(--heading-font);
-  font-family: "Roboto", sans-serif;
-
-}
-
-.about .progress .skill .val {
-  float: right;
-  font-style: normal;
-  padding: 0px 50px 0px 0px;
-}
-
-.about .progress-bar-wrap {
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
-  height: 10px;
-  width:  92%;
-}
-
-.about .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: var(--accent-color);
-}
-
-.about .about-me h4 {
+.about .bio-about-me h4 {
   font-size: 45px;
   text-align: center;
   position: relative;
@@ -1039,14 +835,31 @@ progress horizontal bar */
   font-family: "Share Tech", sans-serif;
 }
 
-.about .about-me p {
+.about .bio-about-me p {
   font-size: 15px;
   text-align:justify;
 
 }
 
+.about .bio-about-me h4 {
+  font-size: 45px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-family: "Share Tech", sans-serif;
+  text-transform: uppercase;
+}
 
+.about .bio-about-me p {
+  font-size: 15px;
+  text-align:justify;
+
+}
 @media (max-width: 600px) {
+
+
 
   .about .skills-content h5 {
   font-size: 35px;
@@ -1126,51 +939,8 @@ progress horizontal bar */
   font-weight: 500;
 }
 
-/* =========================
-progress horizontal bar */
 
-.about .progress {
-  height: 36px;
-  display: block;
-  background: none;
-  border-radius: 0;
-  margin-top: 15px;
-
-
-}
-
-.about .progress .skill {
-  color: var(--default-color);
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: var(--heading-font);
-  font-family: "Roboto", sans-serif;
-
-}
-
-.about .progress .skill .val {
-  float: right;
-  font-style: normal;
-  padding: 0px 0px 0px 0px;
-}
-
-.about .progress-bar-wrap {
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
-  height: 10px;
-  width:  100%;
-}
-
-.about .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: var(--accent-color);
-}
-
-.about .about-me h4 {
+.about .bio-about-me h4 {
   font-size: 45px;
   text-align: center;
   position: relative;
@@ -1178,13 +948,413 @@ progress horizontal bar */
   margin-bottom: 30px;
   font-weight: 700;
   font-family: "Share Tech", sans-serif;
+  text-transform: uppercase;
 }
 
-.about .about-me p {
+.about .bio-about-me p {
   font-size: 15px;
-  text-align:justify;
+  text-align:left;
 
 }
+}
+
+
+
+/* =================================
+Professional Skills
+============== */
+
+.skills-section.skills-animation h2 {
+  font-family: "Share Tech", sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 50px !important;
+  text-transform: uppercase;
+  text-align: center; /* Optional: center the title */
+}
+
+
+
+/* ===== Skill Category Titles ===== */
+h5.frontend-skills-title,
+h5.Backend-skills-title,
+h5.Frameworks-skills-title,
+h5.Databases-skills-title,
+h5.CloudStorage-skills-title,
+h5.RPA-skills-title,
+h5.MS-skills-title,
+h5.UXUi-skills-title,
+h5.Design-skills-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 80px 0 15px 0;
+  font-family: "Share Tech", sans-serif;
+  text-transform: uppercase;
+}
+
+/* ============================== */
+/*
+Radial skills */
+:root {
+  --accent-color: #00bcd4;
+}
+
+.skills-grid {
+  display: flex;
+  padding-top: 0;
+  flex-wrap: wrap;
+  gap: 150px;
+  justify-content: center;
+  padding: 5px 0 0 0;
+  font-family: "Share Tech", sans-serif;
+}
+
+.radial-progress {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  margin: 0px;
+  padding: 10px;
+  box-sizing: border-box;
+  f
+}
+
+.radial-progress svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.radial-progress circle {
+  fill: none;
+  stroke-width: 14;
+}
+
+.radial-progress .bg {
+  stroke: #e0e0e0;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
+}
+
+.radial-progress .progress {
+  stroke: var(--accent-color);
+  stroke-dasharray: 408.4;
+  stroke-dashoffset: 408.4;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1.2s ease-in-out;
+  filter: drop-shadow(0 0 5px var(--accent-color));
+}
+
+.radial-progress .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 5px;
+}
+
+.radial-progress .value {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 4px;
+}
+
+.radial-progress .label {
+  font-size: 16px;
+  color: #333;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+
+/* ============================== */
+
+/* ===== Progress Bar Container ===== */
+.progress {
+  height: 36px;
+  display: block;
+  background: none;
+  border-radius: 0;
+  margin-top: 15px;
+}
+
+/* ===== Skill Label and Value ===== */
+.progress .skill {
+  color: var(--default-color);
+  margin: 0 0 6px 0;
+  padding: 0;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+}
+
+.progress .skill .val {
+  float: right;
+  font-style: normal;
+  padding-right: 50px;
+}
+
+/* ===== 3D-like Progress Bar Track ===== */
+.progress-bar-wrap {
+  background: linear-gradient(to right, #d0d0d0, #f0f0f0);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  height: 14px;
+  width: 92%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== 3D-like Progress Fill ===== */
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(135deg, var(--accent-color), #00ffff);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 5px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== Light Sweep Animation (optional) ===== */
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0.3), transparent);
+  transform: skewX(-20deg);
+  animation: sweep 2s infinite;
+}
+
+@keyframes sweep {
+  0% {
+    left: -40%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+
+  .skills-section.skills-animation h2 {
+  font-family: "Share Tech", sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 5px !important;
+  text-transform: uppercase;
+  text-align: center; /* Optional: center the title */
+}
+
+/* ===== Skill Category Titles ===== */
+h5.frontend-skills-title,
+h5.Backend-skills-title,
+h5.Frameworks-skills-title,
+h5.Databases-skills-title,
+h5.CloudStorage-skills-title,
+h5.RPA-skills-title,
+h5.MS-skills-title,
+h5.UXUi-skills-title,
+h5.Design-skills-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 50px 0 15px 0;
+  font-family: "Share Tech", sans-serif;
+  text-transform: uppercase;
+}
+
+/* ===== Progress Bar Container ===== */
+.progress {
+  height: 36px;
+  display: block;
+  background: none;
+  border-radius: 0;
+  margin-top: 15px;
+}
+
+/* ===== Skill Label and Value ===== */
+.progress .skill {
+  color: var(--default-color);
+  margin: 0 0 6px 0;
+  padding: 0;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+}
+
+.progress .skill .val {
+  float: right;
+  font-style: normal;
+  padding-right: 50px;
+}
+
+/* ===== Progress Bar Track ===== */
+/* ============================== */
+/*
+Radial skills */
+:root {
+  --accent-color: #00bcd4;
+}
+
+.skills-grid {
+  display: flex;
+
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0px 0px 0px;
+  font-family: "Share Tech", sans-serif;
+
+}
+
+.radial-progress {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0px;
+  padding: 10px;
+  box-sizing: border-box;
+
+}
+
+.radial-progress svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.radial-progress circle {
+  fill: none;
+  stroke-width: 14;
+}
+
+.radial-progress .bg {
+  stroke: #e0e0e0;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
+}
+
+.radial-progress .progress {
+  stroke: var(--accent-color);
+  stroke-dasharray: 408.4;
+  stroke-dashoffset: 408.4;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1.2s ease-in-out;
+  filter: drop-shadow(0 0 5px var(--accent-color));
+}
+
+.radial-progress .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 5px;
+}
+
+.radial-progress .value {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 4px;
+}
+
+.radial-progress .label {
+  font-size: 16px;
+  color: #333;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+
+/* ============================== */
+
+/* ===== Progress Bar Container ===== */
+.progress {
+  height: 36px;
+  display: block;
+  background: none;
+  border-radius: 0;
+  margin-top: 15px;
+}
+
+/* ===== Skill Label and Value ===== */
+.progress .skill {
+  color: var(--default-color);
+  margin: 0 0 6px 0;
+  padding: 0;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+}
+
+.progress .skill .val {
+  float: right;
+  font-style: normal;
+  padding-right: 50px;
+}
+
+/* ===== 3D-like Progress Bar Track ===== */
+.progress-bar-wrap {
+  background: linear-gradient(to right, #d0d0d0, #f0f0f0);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  height: 14px;
+  width: 92%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== 3D-like Progress Fill ===== */
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(135deg, var(--accent-color), #00ffff);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 5px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== Light Sweep Animation (optional) ===== */
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0.3), transparent);
+  transform: skewX(-20deg);
+  animation: sweep 2s infinite;
+}
+
+@keyframes sweep {
+  0% {
+    left: -40%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+
+
+
 
 }
 

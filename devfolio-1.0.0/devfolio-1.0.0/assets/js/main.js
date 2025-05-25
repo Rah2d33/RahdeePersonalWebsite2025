@@ -121,28 +121,10 @@
   // Animate bio in About me
 
 
+
   /**
-   * Animate the skills items on reveal
+   * Animate the skill progress circle items on reveal
    */
-  let skillsAnimation = document.querySelectorAll('.skills-animation');
-  skillsAnimation.forEach((item) => {
-    new Waypoint({
-      element: item,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = item.querySelectorAll('.progress .progress-bar');
-        progress.forEach(el => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%';
-        });
-      }
-    });
-  });
-  /**
-   * Animate the skills items on reveal
-   */
-
-
-
 
    document.querySelectorAll('.progress-circle').forEach(container => {
     const percent = container.dataset.percent;
@@ -181,6 +163,50 @@
     container.appendChild(percentText);
     container.appendChild(labelText);
   });
+
+ /**
+   * Animate the skills items on reveal
+   */
+ document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const percent = el.getAttribute("data-percent");
+        const circle = el.querySelector(".progress");
+        const radius = 90;
+        const circumference = 2 * Math.PI * radius;
+        const offset = circumference - (percent / 100) * circumference;
+        circle.style.strokeDashoffset = offset;
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.6 });
+
+  document.querySelectorAll(".radial-progress").forEach(el => observer.observe(el));
+});
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const skillsAnimation = document.querySelectorAll('.skills-animation');
+
+    skillsAnimation.forEach((item) => {
+      new Waypoint({
+        element: item,
+        offset: '80%',
+        handler: function () {
+          const progressBars = item.querySelectorAll('.progress .progress-bar');
+          progressBars.forEach(bar => {
+            const value = bar.getAttribute('aria-valuenow');
+            bar.style.width = value + '%';
+          });
+
+          // Trigger only once
+          this.destroy();
+        }
+      });
+    });
+  });
+
 
   // Animate on scroll using Waypoints
   document.querySelectorAll('.skills-animation').forEach((item) => {
