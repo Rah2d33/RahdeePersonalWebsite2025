@@ -771,11 +771,6 @@ font-family: "Roboto", sans-serif;
 
 }
 
-
-
-
-
-
 .progress-circle {
   position: relative;
   width: 100px;
@@ -796,7 +791,7 @@ font-family: "Roboto", sans-serif;
 
 .circle-fg {
   fill: none;
-  stroke: #00c6ff;
+  stroke: #00bcd4;
   stroke-width: 10;
   stroke-linecap: round;
   stroke-dasharray: 283;
@@ -806,12 +801,14 @@ font-family: "Roboto", sans-serif;
 
 .progress-circle .percent-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 55%;
+  left: 53%;
   transform: translate(-50%, -55%);
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  color: #00c6ff;
+       font-family: "Share Tech", sans-serif !important;
+
+
 }
 
 .progress-circle .label-text {
@@ -822,6 +819,8 @@ font-family: "Roboto", sans-serif;
   font-size: 0.85rem;
   color: #333;
   font-weight: 500;
+  font-family: "Roboto", sans-serif !important;
+
 }
 
 
@@ -857,6 +856,10 @@ font-family: "Roboto", sans-serif;
   text-align:justify;
 
 }
+
+/* =================
+Mobile screens
+================ */
 @media (max-width: 600px) {
 
 
@@ -874,6 +877,7 @@ font-family: "Roboto", sans-serif;
   justify-content: space-between;
   gap: 0.21rem;
   margin-bottom: 2rem;
+
 }
 
 .progress-circle {
@@ -885,6 +889,7 @@ font-family: "Roboto", sans-serif;
   aspect-ratio: 1 / 1; /* keeps circle shape */
   display: flex;
   align-items: center;
+     font-family: "DM-Sans", sans-serif !important;
   justify-content: center;
   margin-bottom: 2rem;
 }
@@ -928,14 +933,25 @@ font-family: "Roboto", sans-serif;
   font-size: 0.9rem;
   font-weight: bold;
   z-index: 2;
-}
 
+}
+  .progress-circle .percent-text {
+    position: absolute;
+    top: 55%;
+    left: 53%;
+    transform: translate(-50%, -55%);
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: "Share Tech", sans-serif !important;
+    color: #00bcd4;
+  }
 .circle .label {
   position: absolute;
   bottom: -2rem; /* increased from -1.2rem */
   text-align: center;
   width: 100%;
   font-size: 0.85rem;
+
   font-weight: 500;
 }
 
@@ -958,6 +974,108 @@ font-family: "Roboto", sans-serif;
 }
 }
 
+/* =================
+Bigger screens
+================ */
+
+@media (min-width: 1200px) and (max-width: 2400px) {
+  .about .skills-content h5 {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 30px 0 15px 0;
+    font-family: "Share Tech", sans-serif;
+    text-align: center;
+  }
+
+  .about .container {
+    background-color: var(--surface-color);
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+  }
+
+  .about .soft-skills-content h5 {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 30px 0 15px 0;
+    font-family: "Share Tech", sans-serif;
+  }
+
+  .soft-skills-row {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 4.6rem; /* space between circles */
+    margin-bottom: 3rem;
+  }
+
+  .progress-circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+
+  }
+
+  .progress-circle svg {
+    transform: rotate(-90deg);
+    width: 100px;
+    height: 100px;
+
+  }
+
+  .circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 10;
+  }
+
+  .circle-fg {
+    fill: none;
+    stroke: #00bcd4;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 1.4s ease-out;
+  }
+
+  .progress-circle .percent-text {
+    position: absolute;
+    top: 55%;
+    left: 53%;
+    transform: translate(-50%, -55%);
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: "Share Tech", sans-serif !important;
+    color: #00bcd4;
+  }
+
+  .progress-circle .label-text {
+    position: absolute;
+    bottom: -1.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.85rem;
+    color: #333;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif !important;
+  }
+
+  .about .bio-about-me h4 {
+    font-size: 45px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-family: "Share Tech", sans-serif;
+    text-transform: uppercase;
+  }
+
+  .about .bio-about-me p {
+    font-size: 15px;
+    text-align: justify;
+  }
+}
 
 
 /* =================================
@@ -990,6 +1108,7 @@ h5.Design-skills-title {
   margin: 80px 0 15px 0;
   font-family: "Share Tech", sans-serif;
   text-transform: uppercase;
+  padding: 0px 0px 0px 0px;
 }
 
 /* ============================== */
@@ -1003,20 +1122,19 @@ Radial skills */
   display: flex;
   padding-top: 0;
   flex-wrap: wrap;
-  gap: 150px;
-  justify-content: center;
+  gap: 30px;
+  justify-content: left;
   padding: 5px 0 0 0;
   font-family: "Share Tech", sans-serif;
 }
 
 .radial-progress {
   position: relative;
-  width: 190px;
-  height: 190px;
+  width: 195px;
+  height: 195px;
   margin: 0px;
   padding: 10px;
   box-sizing: border-box;
-  f
 }
 
 .radial-progress svg {
@@ -1032,17 +1150,20 @@ Radial skills */
 
 .radial-progress .bg {
   stroke: #e0e0e0;
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
+  /* filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1)); */ /* Remove this line */
 }
 
 .radial-progress .progress {
-  stroke: var(--accent-color);
-  stroke-dasharray: 408.4;
-  stroke-dashoffset: 408.4;
+  fill: none;
+  stroke: url(#grad1); /* Use gradient ID defined in SVG */
+  stroke-width: 12;
   stroke-linecap: round;
-  transition: stroke-dashoffset 1.2s ease-in-out;
-  filter: drop-shadow(0 0 5px var(--accent-color));
+  stroke-dasharray: 408;
+  stroke-dashoffset: 408;
+  transition: stroke-dashoffset 1.2s ease-out;
 }
+
+
 
 .radial-progress .content {
   position: absolute;
@@ -1058,6 +1179,7 @@ Radial skills */
   font-weight: bold;
   color: var(--accent-color);
   margin-bottom: 4px;
+   padding-right:  6px !important;
 }
 
 .radial-progress .label {
@@ -1065,14 +1187,45 @@ Radial skills */
   color: #333;
   text-transform: uppercase;
   margin-top: 4px;
+   padding-left: -15px !important;
 }
 
+/* .radial-progress .sweep-light {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.radial-progress .sweep-light::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.4) 0%, transparent 60%);
+  transform-origin: center left;
+  animation: rotate-sweep 2s linear infinite;
+  transform: rotate(0deg) skewX(-20deg);
+}
+
+@keyframes rotate-sweep {
+  0% {
+    transform: rotate(0deg) skewX(-20deg);
+  }
+  100% {
+    transform: rotate(360deg) skewX(-20deg);
+  }
+} */
 
 /* ============================== */
 
 /* ===== Progress Bar Container ===== */
 .progress {
-  height: 36px;
+   height: auto;
   display: block;
   background: none;
   border-radius: 0;
@@ -1088,12 +1241,18 @@ Radial skills */
   text-transform: uppercase;
   font-weight: 600;
   font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  margin-bottom: 5px !important;
+  line-height: 1.2 !important;
 }
 
 .progress .skill .val {
   float: right;
   font-style: normal;
-  padding-right: 50px;
+  padding-right: 90px;
+   font-family: "Roboto", sans-serif;
+   font-size: 15px;
+
 }
 
 /* ===== 3D-like Progress Bar Track ===== */
@@ -1101,8 +1260,8 @@ Radial skills */
   background: linear-gradient(to right, #d0d0d0, #f0f0f0);
   box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
   border-radius: 10px;
-  height: 14px;
-  width: 92%;
+  height: 12px ;
+  width: 96%;
   position: relative;
   overflow: hidden;
 }
@@ -1192,13 +1351,16 @@ h5.Design-skills-title {
   display: block;
   text-transform: uppercase;
   font-weight: 600;
-  font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
+  font-size: 13px;
 }
 
 .progress .skill .val {
   float: right;
   font-style: normal;
   padding-right: 50px;
+    font-family: "DM-Sans", sans-serif;
+   font-size: 13px;
 }
 
 /* ===== Progress Bar Track ===== */
@@ -1211,19 +1373,53 @@ Radial skills */
 
 .skills-grid {
   display: flex;
-
+  padding-top: 0;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 35px;
   justify-content: center;
-  padding: 20px 0px 0px 0px;
+  padding: 5px 0 0 0;
   font-family: "Share Tech", sans-serif;
-
 }
+
+
+
+/* UI - top left above HTML */
+.radial-progress:nth-child(4) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* UX - top right above JS */
+.radial-progress:nth-child(5) {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+/* HTML - bottom left */
+.radial-progress:nth-child(1) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* CSS - bottom center */
+.radial-progress:nth-child(2) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* JavaScript - bottom right */
+.radial-progress:nth-child(3) {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+
+
 
 .radial-progress {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 155px;
+  height: 155px;
   margin: 0px;
   padding: 10px;
   box-sizing: border-box;
@@ -1243,7 +1439,7 @@ Radial skills */
 
 .radial-progress .bg {
   stroke: #e0e0e0;
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
+  /* filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1)); */ /* Remove this line */
 }
 
 .radial-progress .progress {
@@ -1252,38 +1448,40 @@ Radial skills */
   stroke-dashoffset: 408.4;
   stroke-linecap: round;
   transition: stroke-dashoffset 1.2s ease-in-out;
-  filter: drop-shadow(0 0 5px var(--accent-color));
+  /* filter: drop-shadow(0 0 5px var(--accent-color)); */ /* Remove this line */
 }
 
 .radial-progress .content {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 51%;
   transform: translate(-50%, -50%);
   text-align: center;
   padding: 5px;
+
 }
 
 .radial-progress .value {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   color: var(--accent-color);
   margin-bottom: 4px;
+  padding-left: 5px;
 }
 
 .radial-progress .label {
-  font-size: 16px;
+  font-size: 13px;
   color: #333;
   text-transform: uppercase;
   margin-top: 4px;
+  padding-right: 4px;
 }
-
 
 /* ============================== */
 
 /* ===== Progress Bar Container ===== */
 .progress {
-  height: 36px;
+  height: 50px;
   display: block;
   background: none;
   border-radius: 0;
@@ -1304,7 +1502,8 @@ Radial skills */
 .progress .skill .val {
   float: right;
   font-style: normal;
-  padding-right: 50px;
+  font-family: "Roboto", sans-serif;
+  padding-right: 20px;
 }
 
 /* ===== 3D-like Progress Bar Track ===== */
@@ -1312,8 +1511,8 @@ Radial skills */
   background: linear-gradient(to right, #d0d0d0, #f0f0f0);
   box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
   border-radius: 10px;
-  height: 14px;
-  width: 92%;
+  height: 20px;
+  width: 97%;
   position: relative;
   overflow: hidden;
 }
@@ -1352,11 +1551,188 @@ Radial skills */
   }
 }
 
-
-
-
-
 }
+
+
+/* =================
+Bigger screens
+================ */
+
+@media (min-width: 1200px) and (max-width: 2400px) {
+  .skills-section.skills-animation h2 {
+    font-family: "Share Tech", sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 50px !important;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  /* ===== Skill Category Titles ===== */
+  h5.frontend-skills-title,
+  h5.Backend-skills-title,
+  h5.Frameworks-skills-title,
+  h5.Databases-skills-title,
+  h5.CloudStorage-skills-title,
+  h5.RPA-skills-title,
+  h5.MS-skills-title,
+  h5.UXUi-skills-title,
+  h5.Design-skills-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 80px 0 15px 0;
+    font-family: "Share Tech", sans-serif;
+    text-transform: uppercase;
+    padding: 0;
+  }
+
+  :root {
+    --accent-color: #00bcd4;
+  }
+
+  .skills-grid {
+    display: flex;
+    padding-top: 0;
+    flex-wrap: wrap;
+    gap: 80px;
+    justify-content: left;
+    padding: 5px 0 0 0;
+    font-family: "Share Tech", sans-serif;
+  }
+
+  .radial-progress {
+    position: relative;
+    width: 195px;
+    height: 195px;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .radial-progress svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+
+  .radial-progress circle {
+    fill: none;
+    stroke-width: 14;
+  }
+
+  .radial-progress .bg {
+    stroke: #e0e0e0;
+  }
+
+  .radial-progress .progress {
+    stroke: var(--accent-color);
+    stroke-dasharray: 408.4;
+    stroke-dashoffset: 408.4;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1.2s ease-in-out;
+  }
+
+  .radial-progress .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 5px;
+  }
+
+  .radial-progress .value {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 2px;
+    margin-left: 15px;
+  }
+
+  .radial-progress .label {
+    font-size: 17px;
+    color: #333;
+    text-transform: uppercase;
+    margin-top: 4px;
+    margin-left: -2px;
+  }
+
+
+
+
+  .progress {
+    height: 56px;
+    display: block;
+    background: none;
+    border-radius: 0;
+    margin-top: 15px;
+  }
+
+  .progress .skill {
+    color: var(--default-color);
+    margin: 0 0 6px 0;
+    padding: 0;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+  }
+
+  .progress .skill .val {
+    float: right;
+    font-style: normal;
+    padding-right: 70px;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+  }
+
+  .progress-bar-wrap {
+    background: linear-gradient(to right, #d0d0d0, #f0f0f0);
+    max-height: 50px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
+    border-radius: 30px;
+    height: 25px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .progress-bar {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(135deg, var(--accent-color), #00ffff);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .progress-bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0.3), transparent);
+    transform: skewX(-20deg);
+    animation: sweep 2s infinite;
+  }
+
+  @keyframes sweep {
+    0% {
+      left: -40%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Resume Section
@@ -1364,10 +1740,10 @@ Radial skills */
 .container.resume.section-title h2 {
   font-family: "Share Tech", sans-serif;
   font-size: 45px;
-  font-weight: normal;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+  font-weight: 700;
+  margin-bottom: 50px !important;
+  text-transform: uppercase;
+  text-align: center; /* Optional: center the title */
 
 }
 

@@ -167,6 +167,8 @@
  /**
    * Animate the skills items on reveal
    */
+
+
  document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -174,17 +176,36 @@
         const el = entry.target;
         const percent = el.getAttribute("data-percent");
         const circle = el.querySelector(".progress");
-        const radius = 90;
+        const radius = 65; // correct radius
         const circumference = 2 * Math.PI * radius;
         const offset = circumference - (percent / 100) * circumference;
         circle.style.strokeDashoffset = offset;
+
         observer.unobserve(el);
       }
     });
   }, { threshold: 0.6 });
 
-  document.querySelectorAll(".radial-progress").forEach(el => observer.observe(el));
+  document.querySelectorAll(".radial-progress").forEach(el => {
+    observer.observe(el);
+
+    // Add interactive 3D effect
+    el.addEventListener("mousemove", e => {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      const rotateX = (-y / 10).toFixed(2);
+      const rotateY = (x / 10).toFixed(2);
+      el.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    el.addEventListener("mouseleave", () => {
+      el.style.transform = "rotateX(0deg) rotateY(0deg)";
+    });
+  });
 });
+
+
 
   document.addEventListener('DOMContentLoaded', function () {
     const skillsAnimation = document.querySelectorAll('.skills-animation');
